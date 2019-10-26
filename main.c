@@ -1,6 +1,7 @@
 #include <iostm8s103f3.h>
 #include "GPIO.h"
 #include "UART.h"
+#include "ADC.h"
 
 void Sleep(unsigned int times)
   {
@@ -10,15 +11,21 @@ void Sleep(unsigned int times)
 
 void main( void )
 {
+  CLK_CKDIVR = 0x00;     //时钟设置 0分频 主频 16Mhz
+  
+  asm("sim");//关中断  
   GPIO_Init();
   UART1_Init();
+  ADC_Init();
+  
+  asm("rim");//开中断
 
+  unsigned int temp = 0; // VOC值
+  
   while(1)
   {
-    WIFI_LED_ON();
-    Sleep(5000);
-    WIFI_LED_OFF();
-    Sleep(5000);
-    UART1_SendString("Hello!");
+    ADC_Read(&temp);
+    printf("VOC:%d",temp);
+    Sleep(50000);
   }
 }

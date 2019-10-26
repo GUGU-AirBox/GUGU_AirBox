@@ -11,7 +11,15 @@
 * 2018/4/12   v1.0                 完善函数，添加、修改注释 初定
 ***************************************************************************/
 
+#include <stdio.h>
 #include "UART.h"
+
+int fputc(int ch, FILE *f)//STM8S105,printf函数重定向 
+{ 
+  while (!(UART1_SR&0x80)); 
+  UART1_DR=ch;
+  return ch; 
+} 
 
 /***************************************************************************
 * 函数名          : UART1_Init
@@ -23,9 +31,11 @@
 void UART1_Init()
 {
   //UART1初始化 
+  
+  UART1_CR2=0x00;
+  
   //波特率 9600bps 校验位无 数据位8 停止位1
   UART1_CR1=0x00;
-  UART1_CR2=0x00;
   UART1_CR3=0x00;
   unsigned int baud = 16000000 / BAUD_RATE;     //设定串口相应波特率与串口时钟的分频数
   

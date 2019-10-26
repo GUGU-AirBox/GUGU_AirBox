@@ -14,11 +14,11 @@
 
 #include <iostm8s103f3.h>
 
-//WIFI状态指示灯 使用PB5 引脚
-#define WIFI_LED_ODR PB_ODR_ODR5
-#define WIFI_LED_DDR PB_DDR_DDR5
-#define WIFI_LED_CR1 PB_CR1_C15
-#define WIFI_LED_CR2 PB_CR2_C25
+//WIFI状态指示灯 使用PA3 引脚
+#define WIFI_LED_ODR PA_ODR_ODR3
+#define WIFI_LED_DDR PA_DDR_DDR3
+#define WIFI_LED_CR1 PA_CR1_C13
+#define WIFI_LED_CR2 PA_CR2_C23
 
 //用宏的方式代替函数实现
 #define WIFI_LED_ON()  WIFI_LED_ODR = 0
