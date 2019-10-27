@@ -14,7 +14,7 @@ void IIC_Init()
     asm("nop");asm("nop");              //等待复位完成
     asm("nop");asm("nop");              
     I2C_CR2_bit.SWRST = 0;            	//清除复位设置
-    I2C_FREQR_bit.FREQ = 16;      	//Freq = 36M
+    I2C_FREQR_bit.FREQ = 16;      	//Freq = 16M
     I2C_CCRH_bit.F_S = 1;   		//用于快速模式
     I2C_CCRH_bit.DUTY = 0;
     I2C_CCRL = 40;           		//设置I2C的时钟频率为200KHZ  I2CFreq = PCLK1 / CCR / DUTY[位]= 16MHZ / 40 / 2 = 200KHZ   

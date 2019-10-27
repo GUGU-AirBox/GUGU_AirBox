@@ -48,14 +48,14 @@ void SHT20_ReadHuniAndTemprature(unsigned short* _outT, unsigned short* _outRH)
   unsigned short tmp = 0;       // 暂存
   
   // 读温度数据
-  IIC_Read(SHT20_READ_ADDR,SHT20_MEASURE_T_HM,buf,2);
+  IIC_Read(SHT20_WRITE_ADDR,SHT20_MEASURE_T_HM,buf,2);
   tmp = ((buf[0] << 8) + buf[1]) & ~0x0003; //拼合为温度数据并去掉去掉bit0 bit1的状态位
   *_outT = (unsigned short)((-46.85 + 175.72 / 65536 * (float)tmp) * 100); //穿出去为原数据 * 100 去掉小数位
   
   delay_ms(50);
   
   // 读湿度数据
-  IIC_Read(SHT20_READ_ADDR,SHT20_MEASURE_RH_HM,buf,2);
+  IIC_Read(SHT20_WRITE_ADDR,SHT20_MEASURE_RH_HM,buf,2);
   tmp = ((buf[0] << 8) + buf[1]) & ~0x0003; //拼合为温度数据并去掉去掉bit0 bit1的状态位
   *_outRH = (unsigned short)((((float)tmp * 0.00190735) - 6) * 100); //穿出去为原数据 * 100 去掉小数位
 }

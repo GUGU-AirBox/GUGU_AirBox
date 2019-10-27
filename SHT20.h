@@ -15,8 +15,8 @@
 #include "IIC.h"
 
 // 寄存器地址定义
-#define SHT20_WRITE_ADDR        0x80    //写地址
-#define SHT20_READ_ADDR         0x81    //读地址
+#define SHT20_WRITE_ADDR        0x80>>1 //写地址
+#define SHT20_READ_ADDR         0x81>>1 //读地址
 #define SHT20_MEASURE_RH_HM     0XE5    //主机模式读取湿度
 #define SHT20_MEASURE_T_HM      0XE3    //主机模式读取温度
 #define SHT20_MEASURE_RH_NHM    0XF5    //非主机模式读湿度
