@@ -12,7 +12,7 @@
 #ifndef _UART_H_
 #define _UART_H_
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <iostm8s103f3.h>
 
 //²¨ÌØÂÊ

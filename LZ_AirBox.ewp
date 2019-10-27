@@ -1572,22 +1572,22 @@
     <name>$PROJ_DIR$\ADC.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\ADC.h</name>
+    <name>$PROJ_DIR$\Delay.c</name>
   </file>
   <file>
     <name>$PROJ_DIR$\GPIO.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\GPIO.h</name>
+    <name>$PROJ_DIR$\IIC.c</name>
   </file>
   <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\UART.c</name>
+    <name>$PROJ_DIR$\SHT20.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\UART.h</name>
+    <name>$PROJ_DIR$\UART.c</name>
   </file>
 </project>
 
