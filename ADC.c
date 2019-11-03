@@ -29,7 +29,6 @@ void ADC_Init()
   //ADC参数配置
   ADC_CR1 = 0x00;  //ADC时钟，单次转换，关闭ADC
   ADC_CR2 |= 0x08; //右对齐模式，其他保持默认
-  ADC_CSR = ADCCHANEL;  //选择通道
 }
 
 /***************************************************************************
@@ -41,6 +40,7 @@ void ADC_Init()
 ***************************************************************************/
 void ADC_Read(unsigned int* buf)
 {
+  ADC_CSR = ADCCHANEL;  //选择通道
   unsigned int DELAY_TIMES = 50;
   unsigned char ADC_H,ADC_L;  
   unsigned int res = 0;   

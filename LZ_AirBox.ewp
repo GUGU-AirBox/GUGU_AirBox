@@ -1575,6 +1575,9 @@
     <name>$PROJ_DIR$\Delay.c</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\GP2Y1010F43.c</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\GPIO.c</name>
   </file>
   <file>

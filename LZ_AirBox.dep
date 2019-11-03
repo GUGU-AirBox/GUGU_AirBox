@@ -2,112 +2,70 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1349541702</fileChecksum>
+  <fileChecksum>506103709</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Delay.c</file>
       <file>$PROJ_DIR$\ADC.c</file>
-      <file>$PROJ_DIR$\SHT20.c</file>
       <file>$PROJ_DIR$\IIC.c</file>
-      <file>$PROJ_DIR$\GPIO.c</file>
+      <file>$PROJ_DIR$\Delay.c</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\SHT20.c</file>
       <file>$PROJ_DIR$\UART.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\IIC.o</file>
       <file>$PROJ_DIR$\Debug\Obj\GPIO.pbi</file>
       <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-      <file>$PROJ_DIR$\GPIO.h</file>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\Delay.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\ADC.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8mmn.a</file>
-      <file>$PROJ_DIR$\SHT20.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UART.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\GPIO.o</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8mmd.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\ADC.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\IIC.o</file>
+      <file>$PROJ_DIR$\GPIO.c</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\SHT20.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Delay.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\LZ_AirBox.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\SHT20.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\UART.h</file>
-      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\IIC.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
-      <file>$PROJ_DIR$\ADC.h</file>
       <file>$PROJ_DIR$\IIC.h</file>
       <file>$PROJ_DIR$\Delay.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ADC.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\IIC.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
       <file>$PROJ_DIR$\Debug\Exe\temp.bin</file>
       <file>$PROJ_DIR$\Debug\Obj\UART.o</file>
+      <file>$PROJ_DIR$\GPIO.h</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8mmd.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\SHT20.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Delay.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\GPIO.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\LZ_AirBox.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\SHT20.o</file>
+      <file>$PROJ_DIR$\UART.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8mmn.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\ADC.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\Delay.o</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$PROJ_DIR$\ADC.h</file>
+      <file>$PROJ_DIR$\SHT20.h</file>
+      <file>$PROJ_DIR$\GP2Y1010F43.h</file>
+      <file>$PROJ_DIR$\GP2Y1010F43.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\GP2Y1010F43.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\GP2Y1010F43.o</file>
     </outputs>
-    <file>
-      <name>$PROJ_DIR$\Delay.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 21</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 32</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-      </inputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\ADC.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 18</file>
+          <file> 30</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 12</file>
+          <file> 13</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 30 26 8</file>
+          <file> 33 28 7</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 30 26 8</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\SHT20.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 14 31 26 8 32</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14 31 26 8 32</file>
+          <file> 33 28 7</file>
         </tool>
       </inputs>
     </file>
@@ -116,53 +74,7 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 27</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 31 26 8</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 31 26 8</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\GPIO.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 16</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 7</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 9 26 8</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9 26 8</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\UART.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 34</file>
+          <file> 8</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -172,11 +84,34 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 25 26 8</file>
+          <file> 11 28 7</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 25 26 8</file>
+          <file> 11 28 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Delay.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12</file>
         </tool>
       </inputs>
     </file>
@@ -185,21 +120,90 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 24</file>
+          <file> 27</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 19</file>
+          <file> 10</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 26 8 9 25 30 32 14 31</file>
+          <file> 28 7 19 26 33 12 34 11 35</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 26 8 9 25 30 32 14 31</file>
+          <file> 28 7 19 26 33 12 34 11 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\SHT20.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 34 11 28 7 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34 11 28 7 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\UART.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 26 28 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26 28 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\GPIO.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 19 28 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 28 7</file>
         </tool>
       </inputs>
     </file>
@@ -208,7 +212,7 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 33</file>
+          <file> 17</file>
         </tool>
       </outputs>
     </file>
@@ -217,7 +221,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 29 16 34 24 13 17</file>
+          <file> 32 23 18 27 29 20</file>
         </tool>
       </inputs>
     </file>
@@ -226,7 +230,30 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 29 18 21 16 6 23 34 24 13 17</file>
+          <file> 32 30 31 38 23 8 25 18 27 29 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\GP2Y1010F43.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35 28 7 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35 28 7 12</file>
         </tool>
       </inputs>
     </file>
