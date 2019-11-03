@@ -27,7 +27,12 @@ void main( void )
   {
     ADC_Read(&temp);
     SHT20_ReadHuniAndTemprature(&t,&rh);
-    //printf("VOC:%d T:%.2f RH:.2f%",temp,t/100.0,rh/100.0);
+    UART1_SendChar((unsigned char)(temp >> 8));
+    UART1_SendChar((unsigned char)(temp));
+    UART1_SendChar((unsigned char)(t >> 8));
+    UART1_SendChar((unsigned char)(t));
+    UART1_SendChar((unsigned char)(rh >> 8));
+    UART1_SendChar((unsigned char)(rh));
     delay_ms(820);
   }
 }
