@@ -28,7 +28,7 @@
 
 //颗粒物传感器 ADC通道 PD2 AIN3
 #define PM25_ADC_CHANEL 0x03
-#define ADCSAMPLETIMES 5
+#define ADCSAMPLETIMES 10
 
 //颗粒物传感器 发光二极管开关
 #define PM25_LED_ON()   PM25LED_ODR = 0

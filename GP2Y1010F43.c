@@ -10,7 +10,7 @@
 ***************************************************************************/
 
 #include "GP2Y1010F43.h"
-#include "Delay.h"
+#include "TIM2_Delay.h"
 
 void PM25_Init()
 {
@@ -31,20 +31,25 @@ void PM25_Init()
 }
 void PM25_Read(unsigned int* _out_val)
 {
-  PM25_LED_ON(); //开启LED电源
   ADC_CSR = PM25_ADC_CHANEL;  //选择通道
   unsigned char ADC_H,ADC_L;  
-  unsigned int res = 0;   
+  unsigned int res[10] = {0};   
   for(unsigned char i = 0; i < ADCSAMPLETIMES; i++)
   {
     ADC_CR1 |= 0x01;  //启动ADC 启动ADC电源  
-    delay_ms(50);      //延时 等待ADC启动  
-    ADC_CR1 |= 0x01;  //再次启动ADC转换  
+    DelayMs(5);      //延时 等待ADC启动  
+    
+    PM25_LED_ON();      //打开LED电源
+    DelayUs(285);       //按照手册等待280us
+    ADC_CR1 |= 0x01;    //启动AD转换  
+    DelayUs(40);        //继续等待40us
     while((ADC_CSR&0x80) == 0); //等待ADC转换结束  
+    PM25_LED_OFF();     //关闭LED电源
+    DelayUs(4200);      //等待剩下的
+    
     ADC_H = ADC_DRH;  //左对齐 先读高八位  
     ADC_L = ADC_DRL;  //读取低位值  
-    res += ((ADC_H << 8) + ADC_L); //两个八位数据合并成一个16位数据  
+    res[i] = ((ADC_H << 8) + ADC_L); //两个八位数据合并成一个16位数据  
   }
-  *_out_val = res / ADCSAMPLETIMES;
-  PM25_LED_OFF(); //关闭LED电源
+  *_out_val = res[0];
 }

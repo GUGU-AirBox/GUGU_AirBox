@@ -1,5 +1,5 @@
 #include "SHT20.h"
-#include "Delay.h"
+#include "TIM2_Delay.h"
 
 /***************************************************************************
 * 函数名          : SHT20_Init
@@ -52,7 +52,7 @@ void SHT20_ReadHuniAndTemprature(unsigned short* _outT, unsigned short* _outRH)
   tmp = ((buf[0] << 8) + buf[1]) & ~0x0003; //拼合为温度数据并去掉去掉bit0 bit1的状态位
   *_outT = (unsigned short)((-46.85 + 175.72 / 65536 * (float)tmp) * 100); //穿出去为原数据 * 100 去掉小数位
   
-  delay_ms(50);
+  DelayMs(50);
   
   // 读湿度数据
   IIC_Read(SHT20_WRITE_ADDR,SHT20_MEASURE_RH_HM,buf,2);
